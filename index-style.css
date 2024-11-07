@@ -7,7 +7,7 @@ body{
 header {
     z-index: 100;
     padding: 0.1vh;
-    background-color: #82735C;
+    background-color: #cab38f;
     height: 100px;
     width: 100vw;
     position: fixed;
@@ -30,24 +30,14 @@ header a:hover {
     justify-content: space-evenly ;
     font-size: x-large;
 }
-#header-img-div{
-    overflow: hidden;
-    width: 100%;
-    height: 40vh;
-}
-#header-img{
-    position: sticky;
-    width: 100%;
-}
+
+
+
+
 @media (max-width: 930px){
     #flex-header{
         font-size: medium;
         
-    }
-    #header-img{
-        height: 130vh;
-        width: 130%;
-        transform: translate(-20%, -50%);
     }
     header {
         height: 80px;
@@ -64,11 +54,7 @@ header a:hover {
     header {
         height: 80px;
     }
-    #header-img{
-        height: 130vh;
-        width: 200%;
-        transform: translate(-20%, -50%);
-    }
+    
     header br{
         display: none;
     }
@@ -88,7 +74,13 @@ header a:hover {
     height: fit-content;
     justify-content: space-evenly ;
 }
-
+@media (max-width: 800px){
+   .sub-flex-displaycards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+}
 .card{
     font-family: "Abril Fatface", serif;
     font-style: normal;
@@ -103,6 +95,11 @@ header a:hover {
     width: 300px;
     background-color: #FFF6EA;
     border-radius: 5%;
+    transition: 500ms;
+
+}
+.card:hover{
+ scale: 1.04;
 }
 .card img{
     height: auto;
@@ -110,3 +107,67 @@ header a:hover {
     margin-bottom: 3%;
     border-radius: 3%;
 }
+.cajafixed{
+    height: 20vh;
+    width: 20vh;
+    position: fixed;
+    align-self: center;
+    justify-self: center;
+}
+
+/* Estilos para la caja emergente (popup) */
+.info-popup {
+    display: none; /* Ocultar el popup por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    z-index: 9999; /* Asegurarse de que esté encima del contenido */
+    justify-content: center;
+    align-items: center;
+}
+
+.info-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Estilo para el texto de la información */
+#info-text {
+    margin-top: 20px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 500%;
+    height: 40vh;
+}
+ 
+.carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: tr;
+}
+    
