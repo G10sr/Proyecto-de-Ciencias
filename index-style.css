@@ -2,6 +2,8 @@ body{
     background-color: #82735C;
     padding: 0%;
     margin: 0px;
+    overflow-x: hidden;
+    margin-bottom: 10%;
 }
 /* Inicio Header */
 header {
@@ -172,6 +174,18 @@ header a:hover {
 }
     
 .hongoMB {
-    width: 50%;
+    max-width: 90%;
     height: 50%;
+}
+.imagendivsi{
+    height: 200px;
+    width: auto;
+    max-width: 300px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.imagendivsi img{
+    height: 100%;
+    text-align: center;
 }
